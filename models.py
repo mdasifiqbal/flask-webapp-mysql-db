@@ -26,7 +26,7 @@ class Venue(db.Model):
     __tablename__ = 'Venue'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String(120))
     genres = Column(String(120))
     address = Column(String(120))
     city = Column(String(120))
@@ -35,7 +35,7 @@ class Venue(db.Model):
     website = Column(String(500))
     facebook_link = Column(String(120))
     seeking_talent = Column(Boolean, default=False)
-    seeking_description = Column(String)
+    seeking_description = Column(String(500))
     image_link = Column(String(500))
     shows = db.relationship('Show', backref='Venue', lazy='dynamic')
 
@@ -44,7 +44,7 @@ class Artist(db.Model):
     __tablename__ = 'Artist'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String(120))
     genres = Column(String(120))
     city = Column(String(120))
     state = Column(String(120))
@@ -52,7 +52,7 @@ class Artist(db.Model):
     website = Column(String(500))
     facebook_link = Column(String(120))
     seeking_venue = Column(Boolean, default=False)
-    seeking_description = Column(String)
+    seeking_description = Column(String(500))
     image_link = Column(String(500))
     shows = db.relationship('Show', backref='Artist', lazy='dynamic')
 
