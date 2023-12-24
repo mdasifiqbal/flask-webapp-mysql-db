@@ -113,7 +113,7 @@ env_variables:
   DB_NAME: 'secret'
   DB_HOST: '111.111.111.111'
   DB_PORT: '5432'
-  DB_CONNECTOR: 'mysql+pymysql'
+  DB_CONNECTOR: 'mysql+mysqlconnector'
   INSTANCE_UNIX_SOCKET: '/cloudsql/Connection name'
   DEPLOYMENT_LOCATION: 'gcp'
 ```
