@@ -79,7 +79,7 @@ To deploy your own instance, follow these steps:
 
 5. When azd has finished deploying, you'll see an endpoint URI in the command output. Visit that URI to browse the app! 🎉
 
-6. If you make any changes to the app code, you can just run this command to redeploy it:
+If you make any changes to the app code, you can just run this command to redeploy it:
 
     ```shell
     azd deploy
