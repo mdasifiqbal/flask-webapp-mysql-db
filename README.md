@@ -81,6 +81,6 @@ To deploy your own instance, follow these steps:
 
 If you make any changes to the app code, you can just run this command to redeploy it:
 
-    ```shell
-    azd deploy
-    ```
+```shell
+azd deploy
+```
