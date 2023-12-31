@@ -3,11 +3,11 @@
 Artists Booking Venues powered by Python (Flask) and MySQL Database.
 There is no user authentication or per-user data stored.
 
-![Thumbnail](./repo-thumbnail.png)
+![Screenshot of website landing page](./repo-thumbnail.png)
 
 The project is designed for deployment on Azure App Service with a MySQL flexible server. See deployment instructions below.
 
-![Architecture Diagram](./architecture-diagram.png)
+![Architecture Diagram: App Service, MySQL server, Key Vault](./architecture-diagram.png)
 
 ## Local Development
 
@@ -84,3 +84,28 @@ If you make any changes to the app code, you can just run this command to redepl
 ```shell
 azd deploy
 ```
+
+## Security
+
+It is important to secure the databases in web applications to prevent unwanted data access.
+This infrastructure uses the following mechanisms to secure the MySQL database:
+
+* Azure Firewall: The database is accessible only from other Azure IPs, not from public IPs. (Note that includes other customers using Azure).
+* Admin Username: Randomly generated and stored in Key Vault.
+* Admin Password: Randomly generated and stored in Key Vault.
+* MySQL Version: Latest available on Azure, version 8.0, which includes security improvements.
+
+⚠️ For even more security, consider using an Azure Virtual Network to connect the Web App to the Database.
+
+## Costs
+
+Pricing varies per region and usage, so it isn't possible to predict exact costs for your usage.
+
+You can try the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) for the resources:
+
+* Azure App Service: Free Tier with shared CPU cores, 1 GB RAM. [Pricing](https://azure.microsoft.com/pricing/details/app-service/linux/)
+* MySQL Flexible Server: Burstable Tier with 1 CPU core, 20GB storage. Pricing is hourly. [Pricing](https://azure.microsoft.com/pricing/details/mysql/)
+* Key Vault: Standard tier with 2 secrets. Vaults are offered in two service tiers—standard and premium. [Pricing](https://azure.microsoft.com/pricing/details/key-vault/)
+
+⚠️ To avoid unnecessary costs, remember to take down your app if it's no longer in use,
+either by deleting the resource group in the Portal or running `azd down`.
