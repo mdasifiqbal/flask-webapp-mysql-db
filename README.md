@@ -15,41 +15,41 @@ The project is designed for deployment on Azure App Service with a MySQL flexibl
 
 1. **Download the project starter code locally**
 
-  ```bash
-  git clone https://github.com/john0isaac/flask-webapp-mysql-db.git
-  cd flask-webapp-mysql-db
-  ```
+    ```bash
+    git clone https://github.com/john0isaac/flask-webapp-mysql-db.git
+    cd flask-webapp-mysql-db
+    ```
 
-2.**Initialize and activate a virtualenv using:**
+2. **Initialize and activate a virtualenv using:**
 
-```bash
-python -m virtualenv venv
-source venv/bin/activate
-```
+    ```bash
+    python -m virtualenv venv
+    source venv/bin/activate
+    ```
 
->**Note** - In Windows, the `venv` does not have a `bin` directory. Therefore, you'd use the analogous command shown below:
+    >**Note** - In Windows, the `venv` does not have a `bin` directory. Therefore, you'd use the analogous command shown below:
 
-```bash
-source venv/Scripts/activate
-deactivate
-```
+    ```bash
+    source venv/Scripts/activate
+    deactivate
+    ```
 
-3.**Install the dependencies:**
+3. **Install the dependencies:**
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-4.**Run the development server:**
+4. **Run the development server:**
 
-```bash
-export FLASK_APP=app.py
-export FLASK_ENV=development
-export FLASK_DEBUG=true
-flask run --reload
-```
+    ```bash
+    export FLASK_APP=app.py
+    export FLASK_ENV=development
+    export FLASK_DEBUG=true
+    flask run --reload
+    ```
 
-5.**Verify on the Browser**
+5. **Verify on the Browser**
 
 Navigate to project homepage [http://127.0.0.1:5000/](http://127.0.0.1:5000/) or [http://localhost:5000](http://localhost:5000)
 
