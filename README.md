@@ -61,7 +61,7 @@ To deploy your own instance, follow these steps:
 
 1. Sign up for a [free Azure account](https://azure.microsoft.com/free/)
 
-2. Install the [Azure Dev CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd). (If you open this repository in Codespaces or with the VS Code Dev Containers extension, that part will be done for you.)
+2. Install the [Azure Dev CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd).
 
 3. Initialize a new `azd` environment:
 
